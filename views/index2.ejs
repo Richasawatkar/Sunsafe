@@ -1,0 +1,155 @@
+<!-- views/index2.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌻 SunSafe - UV Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            font-size: large;
+        }
+    
+        header {
+            height: 10vh;
+            background: yellowgreen;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        section {
+            padding: 50px 30px;
+            text-align: center;
+        }
+    
+        h2 {
+            color: #333;
+        }
+    
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+    
+        .info-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    
+        .info-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 20px;
+            text-align: left;
+            transition: transform 0.3s ease-in-out;
+            background: url("../images/desktop-wallpaper-6-pastel-yellow-yellow-pastel-aesthetic-thumbnail.jpg");
+            background-size: cover;
+        }
+    
+        .info-card:hover {
+            transform: scale(1.05);
+        }
+    
+        .info-card h3 {
+            color: #333;
+        }
+    
+        .error-message {
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+    
+        .image-container {
+            width: 330px;
+            margin: 20px auto; /* Center the image container */
+            margin-right: 210px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+    
+        .image-container img {
+            width: 150%; /* Adjust the width as needed */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+    
+        footer {
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>SunSafe - UV Information</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <section>
+        <% if (error) { %>
+            <p class="error-message"><%= error %></p>
+        <% } else { %>
+            <div class="info-container">
+                <!-- UV Information Card -->
+                <div class="info-card">
+                    <h3>UV Information</h3>
+                    <p><strong>UV Index:</strong> <%= uv %></p>
+                    <p><strong>Max UV Index for the day:</strong> <%= uv_max %></p>
+                    <p><strong>Ozone level:</strong> <%= oz %> du</p>
+                </div>
+
+                <!-- Image Block -->
+                <div class="image-container">
+                    <img src="../images/5.jpg" alt="Additional Image">
+                </div>
+
+                <!-- Additional Information Card -->
+                <div class="info-card">
+                    <h3>Important Information</h3>
+                    <p><strong>Safe exposure time till burn for skin type <%= skinType %>:</strong> <%= safeExposureTime %> minutes</p>
+                    <p>If you plan to stay outside in the sun
+                        for more than <strong><%= hours %> hours, then seek protection!</strong>
+                    </p>
+                </div>
+
+            </div>
+        <% } %>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2023 SunSafe
+    </footer>
+
+</body>
+
+</html>
