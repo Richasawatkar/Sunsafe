@@ -10,8 +10,11 @@ Responsive Design: The web application is designed to be responsive and accessib
 ## Technologies Used
 
 Node.js: A JavaScript runtime for executing server-side code.
+
 Express.js: A web application framework for Node.js, providing a robust set of features for web and mobile applications.
+
 EJS (Embedded JavaScript): A templating engine for rendering dynamic content on the frontend.
+
 Axios: A promise-based HTTP client for making requests to external APIs.
 
 ##APIs Used
