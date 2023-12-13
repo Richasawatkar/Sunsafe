@@ -1,4 +1,4 @@
-SunSafe is a web application that provides UV information based on the user's location and skin type. It utilizes Node.js, Express.js for the backend, and EJS for the frontend to create an interactive user interface. The application makes use of the MapQuest API to obtain latitude and longitude coordinates of a specified location and the OpenUV API to fetch UV data for that location.
+SunSafe is a web application that provides UV information based on the user's location. It utilizes Node.js, Express.js for the backend, and EJS for the frontend to create an interactive user interface. The application makes use of the MapQuest API to obtain latitude and longitude coordinates of a specified location and the OpenUV API to fetch UV data for that location.
 
 
 ## Features
