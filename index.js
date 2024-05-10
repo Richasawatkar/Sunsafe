@@ -44,7 +44,7 @@ app.post("/submit", async (req, res) => {
 
         // Make a request to OpenUV API to get UV data based on location
         const response2 = await axios.get("https://api.openuv.io/api/v1/uv", {
-            headers: { 'x-access-token': 'openuv-9fbc5lrlps9q7lg-io' },
+            headers: { 'x-access-token': 'openuv-1lde0lrlw0nwem9-io' },
             params: {
                 lat: lat,
                 lng: lng,
